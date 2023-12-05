@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Media Source Extensions Byte Stream Format Registry</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
-    <script src="https://w3c.github.io/media-source/media-source.js" class="remove"></script>
     <script class="remove">
       var respecConfig = {
       // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
@@ -27,40 +26,10 @@
            company: "Google Inc.", companyURL: "https://www.google.com/" },
       ],
 
-      mseDefGroupName: "byte-stream-format-registry",
-      mseUnusedGroupNameExcludeList: ["media-source"],
-      mseContributors: [
-      ],
-
       group: "media",
+      github: "w3c/mse-byte-stream-format-registry",
+      wgPublicList: "public-media-wg"
 
-      otherLinks: [{
-      key: 'Repository',
-      data: [{
-          value: 'We are on GitHub',
-          href: 'https://github.com/w3c/mse-byte-stream-format-registry/'
-        }, {
-          value: 'File a bug',
-          href: 'https://github.com/w3c/mse-byte-stream-format-registry/issues'
-        }, {
-          value: 'Commit history',
-          href: 'https://github.com/w3c/mse-byte-stream-format-registry/commits/main/index.html'
-        }]
-      },{
-        key: 'Mailing list',
-        data: [{
-          value: 'public-media-wg@w3.org',
-          href: 'https://lists.w3.org/Archives/Public/public-media-wg/'
-        }]
-      }],
-
-      preProcess: [ mediaSourceAddMainSpecDefinitionInfos, mediaSourcePreProcessor ],
-
-      // Empty definitions for objects declared in the document are here to
-      // prevent error messages from being displayed for references to these objects.
-      definitionMap: {},
-
-      postProcess: [ mediaSourcePostProcessor ]
       };
 
     </script>
@@ -73,30 +42,30 @@
       #registry table td, table th { border-left: solid; border-right: solid; border-bottom: solid thin; vertical-align: top; padding: 0.2em; }
     </style>
   </head>
-  <body>
+  <body data-cite="media-source">
 
     <section id="abstract">
-      <p>This specification defines the byte stream formats for use with the <a def-id="mse-spec"></a> specification [[MEDIA-SOURCE]].</p>
+      <p>This specification defines the byte stream formats for use with the [[[MEDIA-SOURCE]]] specification [[MEDIA-SOURCE]].</p>
     </section>
 
     <section id="sotd">
-      <p>The working group maintains <a href="https://github.com/w3c/mse-byte-stream-format-registry/issues">a list of all bug reports that the editors have not yet tried to address</a>; there may also be related open bugs in the [[MEDIA-SOURCE]] repository.</p>
+      <p>The working group maintains <a href="https://github.com/w3c/mse-byte-stream-format-registry/issues">a list of all bug reports that the editors have not yet tried to address</a>;
+      there may also be related open bugs in the <a href="https://github.com/w3c/media-source">GitHub repository</a>.</p>
       <p>Implementors should be aware that this specification is not stable. <strong>Implementors who are not taking part in the discussions are likely to find the specification changing out from under them in incompatible ways.</strong> Vendors interested in implementing this specification before it eventually reaches the Candidate Recommendation stage should join the mailing list mentioned below and take part in the discussions.</p>
     </section>
 
     <section id="purpose">
       <h2>Purpose</h2>
-      <p>This registry is intended to enhance interoperability among implementations and users of
-        <a class="externalDFN">SourceBuffer</a> objects described in the
-        <a def-id="mse-spec"></a> (MSE) specification. In particular, this registry provides the means (1) to identify
+      <p>This registry is intended to enhance interoperability among implementations and users of {{SourceBuffer}} objects described in the
+        [[[MEDIA-SOURCE]]] specification. In particular, this registry provides the means (1) to identify
         and avoid MIME-type collisions among byte stream formats, and (2) to disclose information about byte stream formats accepted by MSE
-        implementations to promote interoperability.
+        implementations to promote interoperability.</p>
     </section>
 
     <section id="organization">
       <h2>Organization</h2>
       <p>The registry maintains a mapping between MIME-type/subtype pairs and byte stream format specifications. The byte stream format specifications describe the
-        structure and semantics of byte streams accepted by <a class="externalDFN">SourceBuffer</a> objects
+        structure and semantics of byte streams accepted by {{SourceBuffer}} objects
         created with the associated MIME-type/subtype pair.</p>
       <p>This registry is not intended to include any information on whether a byte stream format is encumbered by intellectual property claims. Implementors and users
         are advised to seek appropriate legal counsel in this matter if they intend to implement or use a specific byte stream format.</p>
@@ -107,12 +76,11 @@
       <ol>
         <li>Each entry MUST include a unique MIME-type/subtype pair. If the byte stream format is derived-from an existing file format, then it SHOULD use the
           MIME-type/subtype pairs typically used for the file format.</li>
-        <li>Each entry MUST include a <a def-id="generate-timestamps-flag"></a> value that MUST be used by
-            <a class="externalDFN">SourceBuffer</a> when handling the byte stream format.</li>
+        <li>Each entry MUST include a {{SourceBuffer/[[generate timestamps flag]]}} value that MUST be used by
+            {{SourceBuffer}} when handling the byte stream format.</li>
         <li>Each entry MUST include a link that references a publically available specification. It is recommended that such a specification be made available
           without cost (other than reasonable shipping and handling if not available by online means).</li>
-        <li>Each entry MUST comply with all requirements outlined in the <a def-id="byte-stream-formats-section"></a>
-          of the <a def-id="mse-spec"></a> specification [[!MEDIA-SOURCE]].</li>
+        <li>Each entry MUST comply with all requirements outlined in the <a data-cite="media-source#byte-stream-formats">Byte Stream Formats section</a> of the [[[MEDIA-SOURCE]]] specification [[MEDIA-SOURCE]].</li>
         <li>Candidate entries MUST be announced on <a href="mailto:public-html-media@w3.org">public-html-media@w3.org</a> (<a href="mailto:public-html-media-request@w3.org">subscribe</a>,
           <a href="http://lists.w3.org/Archives/Public/public-html-media/">archives</a>) so they can be discussed and evaluated for compliance before being added to the
           registry.</li>
@@ -136,7 +104,10 @@
               audio/webm<br>
               video/webm
             </td>
-            <td><a def-id="byte-stream-format-registry-webm"></a> [[!MSE-FORMAT-WEBM]]</td>
+            <td>
+              [[[MSE-BYTE-STREAM-FORMAT-WEBM]]]
+               [[MSE-BYTE-STREAM-FORMAT-WEBM]]
+            </td>
             <td>false</td>
           </tr>
           <tr>
@@ -144,7 +115,10 @@
               audio/mp4<br>
               video/mp4
             </td>
-            <td><a def-id="byte-stream-format-registry-isobmff"></a> [[!MSE-FORMAT-ISOBMFF]]</td>
+            <td>
+              [[[MSE-BYTE-STREAM-FORMAT-ISOBMFF]]]
+               [[MSE-BYTE-STREAM-FORMAT-ISOBMFF]]
+            </td>
             <td>false</td>
           </tr>
           <tr>
@@ -152,7 +126,10 @@
               audio/mp2t<br>
               video/mp2t
             </td>
-            <td><a def-id="byte-stream-format-registry-mp2t"></a> [[!MSE-FORMAT-MP2T]]</td>
+            <td>
+              [[[MSE-BYTE-STREAM-FORMAT-MP2T]]]
+               [[MSE-BYTE-STREAM-FORMAT-MP2T]]
+             </td>
             <td>false</td>
           </tr>
           <tr>
@@ -160,7 +137,10 @@
               audio/mpeg<br>
               audio/aac
             </td>
-            <td><a def-id="byte-stream-format-registry-mpeg-audio"></a> [[!MSE-FORMAT-MPEG-AUDIO]]</td>
+            <td>
+              [[[MSE-BYTE-STREAM-FORMAT-MPEG-AUDIO]]]
+               [[MSE-BYTE-STREAM-FORMAT-MPEG-AUDIO]]
+            </td>
             <td>true</td>
           </tr>
         </tbody>
