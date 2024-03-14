@@ -7,7 +7,7 @@
     <script class="remove">
       var respecConfig = {
       // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
-      specStatus: "DRY",
+      specStatus: "ED",
 
       // the specification's short name, as in https://www.w3.org/TR/short-name/
       shortName: "mse-byte-stream-format-registry",
@@ -94,14 +94,14 @@
     <section id="entry-requirements">
       <h2>Registration Entry Requirements</h2>
       <ol>
-        <li>Each entry MUST include a unique MIME-type/subtype pair. If the byte stream format is derived-from an existing file format, then it SHOULD use the
+        <li>Each entry must include a unique MIME-type/subtype pair. If the byte stream format is derived-from an existing file format, then it should use the
           MIME-type/subtype pairs typically used for the file format.</li>
-        <li>Each entry MUST include a {{SourceBuffer/[[generate timestamps flag]]}} value that MUST be used by
+        <li>Each entry must include a {{SourceBuffer/[[generate timestamps flag]]}} value that must be used by
             {{SourceBuffer}} when handling the byte stream format.</li>
-        <li>Each entry MUST include a link that references a publically available specification. It is recommended that such a specification be made available
+        <li>Each entry must include a link that references a publically available specification. It is recommended that such a specification be made available
           without cost (other than reasonable shipping and handling if not available by online means).</li>
-        <li>The referenced specification for each entry MUST comply with all requirements outlined in the <a data-cite="media-source#byte-stream-formats">Byte Stream Formats section</a> of the [[[MEDIA-SOURCE]]] specification [[MEDIA-SOURCE]].</li>
-        <li>Candidate entries MUST be announced by filing an issue in the
+        <li>The referenced specification for each entry must comply with all requirements outlined in the <a data-cite="media-source#byte-stream-formats">Byte Stream Formats section</a> of the [[[MEDIA-SOURCE]]] specification [[MEDIA-SOURCE]].</li>
+        <li>Candidate entries must be announced by filing an issue in the
           <a href="https://github.com/w3c/mse-byte-stream-format-registry/issues/">Media Source Extensions Byte Stream Format Registry GitHub issue tracker</a>
           so they can be discussed and evaluated for compliance before being added to the registry.
           The Media Working Group may seek expertise from outside the Working Group as part of its evaluation,
@@ -110,8 +110,8 @@
           a pull request should be drafted (either by editors or by the party requesting
           the candidate registration) to register the candidate.
           The registry editors will review and merge the pull request.</li>
-        <li>If a registration fails to satisfy a mandatory requirement specified above, then it MAY be removed from the registry (without prejudice). Existing entries cannot be deleted or deprecated otherwise.</li>
-        <li>Existing entries MAY be changed after being published through the same process as candidate entries. Possible changes include modification of the link to the publically available specification.</li>
+        <li>If a registration fails to satisfy a mandatory requirement specified above, then it may be removed from the registry (without prejudice). Existing entries cannot be deleted or deprecated otherwise.</li>
+        <li>Existing entries may be changed after being published through the same process as candidate entries. Possible changes include modification of the link to the publically available specification.</li>
       </ol>
     </section>
 
@@ -173,6 +173,5 @@
         </tbody>
       </table>
     </section>
-    <section id="conformance"></section>
   </body>
 </html>
