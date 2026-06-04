@@ -62,7 +62,7 @@
       #registry table td, table th { border-left: solid; border-right: solid; border-bottom: solid thin; vertical-align: top; padding: 0.2em; }
     </style>
   </head>
-  <body data-cite="media-source">
+  <body data-cite="media-source mimesniff">
 
     <section id="abstract">
       <p>This registry defines the byte stream formats for use with the [[[MEDIA-SOURCE]]] specification [[MEDIA-SOURCE]].</p>
@@ -93,26 +93,50 @@
 
     <section id="entry-requirements">
       <h2>Registration Entry Requirements</h2>
+      <p>
+        To register an entry, file an issue in the
+        <a href="https://github.com/w3c/mse-byte-stream-format-registry/issues/">Media Source Extensions Byte Stream Format Registry GitHub issue tracker</a>
+        so it can be discussed and evaluated for compliance before being added to the registry.
+      </p>
+      <p>
+        The Media Working Group may seek expertise from outside the Working Group as part of its evaluation,
+        e.g., from the editors or relevant standards group of the underlying format specification.
+        If the underlying format specification is not publicly available,
+        it must be made available to the Working Group for evaluation.
+        For the entry to be included, there needs to be interest from at least one
+        implementer in the Media Working Group.
+        If the Media Working Group reaches consensus to accept the candidate,
+        send a pull request (either by the registry editors or by the party requesting
+        the candidate registration) to register the candidate
+        that meets the following requirements:
+      </p>
       <ol>
-        <li>Each entry must include a unique MIME-type/subtype pair. If the byte stream format is derived-from an existing file format, then it should use the
-          MIME-type/subtype pairs typically used for the file format.</li>
-        <li>Each entry must include a {{SourceBuffer/[[generate timestamps flag]]}} value that must be used by
-            {{SourceBuffer}} when handling the byte stream format.</li>
-        <li>Each entry must include a link that references a publically available specification. It is recommended that such a specification be made available
-          without cost (other than reasonable shipping and handling if not available by online means).</li>
-        <li>The referenced specification for each entry must comply with all requirements outlined in the <a data-cite="media-source#byte-stream-formats">Byte Stream Formats section</a> of the [[[MEDIA-SOURCE]]] specification [[MEDIA-SOURCE]].</li>
-        <li>Candidate entries must be announced by filing an issue in the
-          <a href="https://github.com/w3c/mse-byte-stream-format-registry/issues/">Media Source Extensions Byte Stream Format Registry GitHub issue tracker</a>
-          so they can be discussed and evaluated for compliance before being added to the registry.
-          The Media Working Group may seek expertise from outside the Working Group as part of its evaluation,
-          e.g., from the codec specification editors or relevant standards group.
-          If the Media Working Group reaches consensus to accept the candidate,
-          a pull request should be drafted (either by editors or by the party requesting
-          the candidate registration) to register the candidate.
-          The registry editors will review and merge the pull request.</li>
-        <li>If a registration fails to satisfy a mandatory requirement specified above, then it may be removed from the registry (without prejudice). Existing entries cannot be deleted or deprecated otherwise.</li>
-        <li>Existing entries may be changed after being published through the same process as candidate entries. Possible changes include modification of the link to the publically available specification.</li>
+        <li>
+          Each entry must include a unique [=MIME type=]/[=MIME type/subtype=] pair. If the byte stream format is derived-from an existing file format, then it should use the [=MIME type=]/[=MIME type/subtype=] pairs typically used for the file format.
+        </li>
+        <li>
+          Each entry must include a {{SourceBuffer/[[generate timestamps flag]]}} value that must be used by {{SourceBuffer}} when handling the byte stream format.
+        </li>
+        <li>
+          Each entry must include a link that references a publicly available registration specification.
+        </li>
+        <li>
+          The registration specification for each entry must comply with all requirements outlined in the <a data-cite="media-source#byte-stream-formats">Byte Stream Formats section</a> of the [[[MEDIA-SOURCE]]] specification [[MEDIA-SOURCE]].
+        </li>
+        <li>
+          It is recommended that the registration specification and the underlying specifications be made available without cost (other than reasonable shipping and handling if not available by online means).
+        </li>
       </ol>
+      <p>
+        Once consensus is reached by the Working Group,
+        the registry editors will review and merge the pull request.
+      </p>
+      <p>
+        Existing entries may be changed after being published, through the same process as candidate entries. Possible changes include modification of the link to the public specification.
+      </p>
+      <p>
+        If a registration fails to satisfy a mandatory requirement specified above, then it may be removed from the registry. Existing entries cannot be deleted or deprecated otherwise.
+      </p>
     </section>
 
     <section id="registry">
