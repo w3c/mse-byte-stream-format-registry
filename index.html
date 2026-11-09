@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="generator" content="ReSpec 37.1.0">
+<meta name="generator" content="ReSpec 37.4.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -63,11 +63,11 @@ details.respec-tests-details>li{padding-left:1em}
 .self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
 .header-wrapper{display:flex;align-items:baseline}
-:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2):has(+a.self-link){position:relative;left:-.5em}
-:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
-:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3,h4,h5,h6):not(:where(#toc>h2,#abstract>h2,#sotd>h2,.head>h2)):has(+a.self-link){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(:where(#toch2))+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.8;text-decoration:none}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§"}
 :is(h2,h3)+a.self-link{top:-.2em}
-:is(h4,h5,h6)+a.self-link::before{color:#000}
+:is(h2,h3)+a.self-link::before{color:var(--heading-text)}
 @media (max-width:767px){
 dd{margin-left:0}
 }
@@ -91,7 +91,7 @@ body:has(input[name=color-scheme][value=dark]:checked){color-scheme:dark}
 </style>
   
 <meta name="color-scheme" content="light">
-<meta name="revision" content="1c88a2f934a0d80b16099313e137c60698c12bcd">
+<meta name="revision" content="be5ab4da6b6c0b042a1eb0354eee79d43edd327f">
 <meta name="description" content="This registry defines the byte stream formats for use with the Media Source Extensions™ specification [MEDIA-SOURCE].">
 <style>
 var:hover{text-decoration:underline;cursor:pointer}
@@ -154,44 +154,45 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "group": "media",
   "github": "w3c/mse-byte-stream-format-registry",
   "wgPublicList": "public-media-wg",
-  "gitRevision": "1c88a2f934a0d80b16099313e137c60698c12bcd",
-  "publishISODate": "2026-06-04T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 04 June 2026"
+  "gitRevision": "be5ab4da6b6c0b042a1eb0354eee79d43edd327f",
+  "publishISODate": "2026-11-09T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 09 November 2026"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED">
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/dark.css" disabled=""></head>
   <body data-cite="media-source mimesniff" class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Media Source Extensions Byte Stream Format Registry</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2026-06-04">04 June 2026</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2026-11-09">09 November 2026</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://w3c.github.io/mse-byte-stream-format-registry/">https://w3c.github.io/mse-byte-stream-format-registry/</a>
-              </dd>
+                  <a class="u-url" href="https://w3c.github.io/mse-byte-stream-format-registry/">https://w3c.github.io/mse-byte-stream-format-registry/</a>
+                </dd>
         <dt>Latest published version:</dt><dd>
-                <a href="https://www.w3.org/TR/mse-byte-stream-format-registry/">https://www.w3.org/TR/mse-byte-stream-format-registry/</a>
-              </dd>
+                  <a href="https://www.w3.org/TR/mse-byte-stream-format-registry/">https://www.w3.org/TR/mse-byte-stream-format-registry/</a>
+                </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/mse-byte-stream-format-registry/">https://w3c.github.io/mse-byte-stream-format-registry/</a></dd>
         <dt>History:</dt><dd>
-                    <a href="https://www.w3.org/standards/history/mse-byte-stream-format-registry/">https://www.w3.org/standards/history/mse-byte-stream-format-registry/</a>
-                  </dd><dd>
-                    <a href="https://github.com/w3c/mse-byte-stream-format-registry/commits/">Commit history</a>
-                  </dd>
+                        <a href="https://www.w3.org/standards/history/mse-byte-stream-format-registry/">https://www.w3.org/standards/history/mse-byte-stream-format-registry/</a>
+                      </dd><dd>
+                        <a href="https://github.com/w3c/mse-byte-stream-format-registry/commits/">Commit history</a>
+                      </dd>
         
         
         
         
         
         <dt>
-                Editor:
-              </dt><dd class="editor p-author h-card vcard" data-editor-id="67414">
+                  Editor:
+                </dt><dd class="editor p-author h-card vcard" data-editor-id="67414">
     <span class="p-name fn">Chris Needham</span> (<a class="p-org org h-org" href="https://www.bbc.co.uk/">British Broadcasting Corporation</a>)
   </dd>
         <dt>
-                Former editors:
-              </dt><dd class="editor p-author h-card vcard" data-editor-id="148095">
+                  Former editors:
+                </dt><dd class="editor p-author h-card vcard" data-editor-id="148095">
     <a class="ed_mailto u-email email p-name" href="mailto:matt.wolenetz@gmail.com">Matthew Wolenetz</a> (<span class="p-org org h-org">W3C Invited Expert</span>) (Until February 2024)
   </dd><dd class="editor p-author h-card vcard">
     <span class="p-name fn">Jerry Smith</span> (<a class="p-org org h-org" href="https://www.microsoft.com/">Microsoft Corporation</a>) (Until September 2017)
@@ -255,20 +256,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           Policy</a>.
       
     
-                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                <a rel="disclosure" href="https://www.w3.org/groups/wg/media/ipr">public list of any patent disclosures</a>
-          made in connection with the deliverables of
-          the group; that page also includes
-          instructions for disclosing a patent. An individual who has actual
-          knowledge of a patent that the individual believes contains
-          <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
-          must disclose the information in accordance with
-          <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-        
+                    <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                    <a rel="disclosure" href="https://www.w3.org/groups/wg/media/ipr">public list of any patent disclosures</a>
+            made in connection with the deliverables of
+            the group; that page also includes
+            instructions for disclosing a patent. An individual who has actual
+            knowledge of a patent that the individual believes contains
+            <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
+            must disclose the information in accordance with
+            <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          
   </p><p>
-                      This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20250818/">18 August 2025 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#purpose"><bdi class="secno">1. </bdi>Purpose</a></li><li class="tocline"><a class="tocxref" href="#organization"><bdi class="secno">2. </bdi>Organization</a></li><li class="tocline"><a class="tocxref" href="#entry-requirements"><bdi class="secno">3. </bdi>Registration Entry Requirements</a></li><li class="tocline"><a class="tocxref" href="#registry"><bdi class="secno">4. </bdi>Registry</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                          This document is governed by the
+                          <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20250818/">18 August 2025 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#purpose"><bdi class="secno">1. </bdi>Purpose</a></li><li class="tocline"><a class="tocxref" href="#organization"><bdi class="secno">2. </bdi>Organization</a></li><li class="tocline"><a class="tocxref" href="#entry-requirements"><bdi class="secno">3. </bdi>Registration Entry Requirements</a></li><li class="tocline"><a class="tocxref" href="#registry"><bdi class="secno">4. </bdi>Registry</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 
     <section id="purpose"><div class="header-wrapper"><h2 id="x1-purpose"><bdi class="secno">1. </bdi>Purpose</h2><a class="self-link" href="#purpose" aria-label="Permalink for Section 1."></a></div>
       
@@ -398,7 +399,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="a-references"><bdi class="secno">A. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix A.1"></a></div>
     
     <dl class="bibliography"><dt id="bib-media-source">[MEDIA-SOURCE]</dt><dd>
-      <a href="https://www.w3.org/TR/media-source-2/"><cite>Media Source Extensions™</cite></a>. Jean-Yves Avenard; Mark Watson.  W3C. 4 November 2025. W3C Working Draft. URL: <a href="https://www.w3.org/TR/media-source-2/">https://www.w3.org/TR/media-source-2/</a>
+      <a href="https://www.w3.org/TR/media-source-2/"><cite>Media Source Extensions™</cite></a>. Jean-Yves Avenard; Mark Watson.  W3C. 4 November 2026. W3C Working Draft. URL: <a href="https://www.w3.org/TR/media-source-2/">https://www.w3.org/TR/media-source-2/</a>
     </dd><dt id="bib-mimesniff">[mimesniff]</dt><dd>
       <a href="https://mimesniff.spec.whatwg.org/"><cite>MIME Sniffing Standard</cite></a>. Gordon P. Hemsley.  WHATWG. Living Standard. URL: <a href="https://mimesniff.spec.whatwg.org/">https://mimesniff.spec.whatwg.org/</a>
     </dd><dt id="bib-mse-byte-stream-format-isobmff">[MSE-BYTE-STREAM-FORMAT-ISOBMFF]</dt><dd>
